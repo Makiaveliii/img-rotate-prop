@@ -1,0 +1,129 @@
+:root{
+    --border-radius:20px;
+}
+*{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+body{
+    width:100wv;
+    height: 100vh;
+    background: radial-gradient(ellipse at center,#2c5364, #203a43, #0f2027);
+    display:flex;
+    justify-content: space-around;
+    margin: 50px 0px;
+
+}
+
+#box{
+    width:250px;
+    height:350px;
+    background:transparent;
+    perspective:300px;
+    
+}
+#card{
+    position:relative;
+    width:100%;
+    height: 100%;
+    background: red;
+    text-align: center;
+    transition:1s;
+    transform-style:preserve-3d;
+    border-radius:var(--border-radius);
+   
+}
+#front{
+    position: absolute;
+    width:100%;
+    height:100%;
+    color:white;
+    background:url("https://zwierzaki.pl/wp-content/uploads/2021/12/niebieskie-koty-1200x720.jpg")no-repeat;
+    background-size: cover;
+   
+    backface-visibility:hidden;
+    border-radius:var(--border-radius);
+}
+#back{
+    position:absolute;
+    width:100%;
+    height: 100%;
+    color:white;
+    background:linear-gradient(200deg,rgb(129, 117, 96),rgb(67, 8, 8));
+    transform:rotateY(180deg);
+    backface-visibility:hidden;
+    border-radius:var(--border-radius);
+}
+span{
+    font-weight: 700;
+    font-size: 36px;
+    display:block;
+    position:absolute;
+    top:15%;
+    left:30%;
+    transform:translate(-50%,-50%);
+    z-index: 2;
+}
+
+
+
+#box:hover>#card{
+    transform:rotateY(180deg);
+    
+}
+.txt{
+    display:block;
+    position: absolute;
+    top:40%;
+    text-align: justify;
+    margin:0px 25px;
+}
+
+#pudlo{
+    width:250px;
+    height:350px;
+    
+background-color:transparent;
+perspective: 300px;
+}
+#karta{
+ position:relative;
+    width: 100%;
+ height: 100%;
+ background-color: orange;
+ text-align: center;
+ transition:.7s;
+ transform-style:preserve-3d;
+ border-radius: 10% 40% 10% 10%;
+}
+#pudlo:hover>#karta{
+    transform:rotateY(180deg);
+    
+}
+#pudlo:hover>.spn{
+    color:red;
+}
+#przod{
+    width: 100%;
+    height: 100%;
+    color:white;
+    background:url("https://babuzoo.pl/blog/wp-content/uploads/2021/04/xreadhead-cat-sitting-385x365.png.pagespeed.ic.1y7gHThQoL.jpg");
+    position: absolute;
+    backface-visibility:hidden;
+    border-radius: 10% 40% 10% 10%;
+    
+}
+#tyl{
+    width: 100%;
+    height: 100%;
+    color:white;
+    background:radial-gradient(ellipse at center,purple,black);
+    position: absolute;
+    transform:rotateY(180deg);
+    backface-visibility:hidden;
+    border-radius: 40% 10% 10% 10%;
+   
+   
+}
+
